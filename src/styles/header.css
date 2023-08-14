@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--mainColor);
+    height: 65px;
+    padding: 0 2rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav a{
+    color: var(--textColor);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    color: var(--secondaryColor);
+}
+
+.nav .logout{
+    border: 1px solid var(--secondaryColor);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--textColor);
+    padding: 0.4rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.nav .logout:hover{
+    background-color: var(--secondaryColor);
+}

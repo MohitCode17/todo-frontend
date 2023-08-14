@@ -1,0 +1,144 @@
+.todo-wrapper {
+  padding: 2rem;
+}
+
+.todo-wrapper h4 {
+  font-size: 18px;
+  color: var(--light);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.todo {
+  position: relative;
+  background-color: var(--mainColor);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin-bottom: 16px;
+}
+
+.todo:hover {
+  opacity: 0.8;
+}
+
+.todo .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--mainColorLight);
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  transition: 0.4s;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.todo.is-complete .checkbox {
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary),
+    var(--secondaryColor)
+  );
+}
+
+.todo .text {
+  font-size: 18px;
+  color: var(--textColor);
+}
+
+.todo.is-complete .text {
+  text-decoration: line-through;
+}
+
+.todo .delete-todo {
+  position: absolute;
+  right: 16px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.todo .delete-todo:hover{
+  background-color: var(--mainColorLight);
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+
+.addPopup{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--secondaryColor)
+  );
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--mainColor);
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 32px var(--light);
+}
+
+.closePopup {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.popup h3 {
+  color: var(--light);
+  margin-bottom: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.add-todo-input {
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.popup .button {
+  padding: 0.7rem;
+  cursor: pointer;
+}
